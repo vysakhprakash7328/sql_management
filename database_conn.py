@@ -32,10 +32,10 @@ def create_database():
             exists = cursor.fetchone()
 
             if not exists:
-                cursor.execute("CREATE DATABASE student_management;")
-                print("Database 'student_management' created successfully.")
+                cursor.execute("CREATE DATABASE %s;", (db_name,))
+                print(f"Database {db_name} created successfully.")
             else:
-                print("Database 'student_management' already exists.")
+                print(f"Database {db_name} already exists.")
         except Exception as e:
             print(f"Error creating database: {e}")
         finally:
@@ -47,7 +47,7 @@ def create_database():
 
 def create_tables():
 
-    conn = connect_db("student_management")
+    conn = connect_db(os.getenv("DB_NAME"))
     if conn:
         try:
             cursor = conn.cursor()
