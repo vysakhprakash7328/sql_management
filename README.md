@@ -17,7 +17,7 @@ This is a simple Flask-based application for managing student and teacher data, 
 *** Installation ***
 
 1. Clone the Repository
-    git clone https://github.com/your-username/student-management-flask.git
+    git clone https://github.com/vysakhprakash7328/sql_management.git
     cd student-management-flask
 2. Create a Virtual Environment (Optional)
     It's recommended to create a virtual environment to manage dependencies:
